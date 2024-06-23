@@ -3,7 +3,7 @@
 const express = require('express');
 const cors = require('cors'); // Importando o pacote cors
 const app = express();
-const PORT = 80; // Mudança da porta para 80
+const PORT = 4001; // Mudança da porta 
 
 // Middleware para parsing do corpo das requisições
 app.use(express.json());
