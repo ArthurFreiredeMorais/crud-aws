@@ -1,12 +1,16 @@
 // index.js
 
 const express = require('express');
+const cors = require('cors'); // Importando o pacote cors
 const app = express();
-const PORT = 3000;
+const PORT = 80; // Mudança da porta para 80
 
 // Middleware para parsing do corpo das requisições
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Habilitando o CORS para todas as origens
+app.use(cors());
 
 // Simulação de uma lista de usuários (para fins didáticos)
 let users = [
